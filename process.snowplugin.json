@@ -1,0 +1,20 @@
+{
+	"version":"1.0",
+	"name":"snowplugin",
+	"start":true,
+	"restart":true,
+	"upgrade":true,
+	"command" : [
+		"servicenow"
+	],
+	"osSpecific" : {
+        "Windows" : {
+            "command" : [
+                "servicenow.bat"
+            ]
+        }
+    },
+    "dependencies" : [
+        "cmxserver"
+    ]
+}

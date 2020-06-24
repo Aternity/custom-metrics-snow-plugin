@@ -1,0 +1,536 @@
+{
+  "name": "Service Now",
+  "tabs": [
+    {
+      "id": 0,
+      "name": "Incidents",
+      "columnCount": 3,
+      "rowHeight": 1,
+      "cards": [
+        {
+          "class": ".CustomCardDef",
+          "name": "All Incidents over time",
+          "seriesList": [
+            {
+              "metric": {
+                "metricId": "SERVICE_NOW_INCIDENT",
+                "dimensions": []
+              },
+              "enabledDimensions": [],
+              "groupByDimensionOptions": [],
+              "groupByDimensions": {},
+              "topN": false,
+              "color": {
+                "fillColor": "#c9dfed",
+                "strokeColor": "#2980b9"
+              },
+              "statistic": "CNT",
+              "leftAxis": true,
+              "additionalTableMetrics": [],
+              "tableShowBars": false,
+              "tableColumns": [],
+              "tableTimeWindows": [],
+              "knowAllDimensions": false,
+              "topNLimit": 5,
+              "ascending": false,
+              "orderByField": {
+                "name": "SERVICE_NOW_INCIDENT",
+                "type": "metric",
+                "statistic": "CNT",
+                "displayName": "ServiceNowIncident"
+              }
+            }
+          ],
+          "visType": "LINE",
+          "cardSize": "JUMBO",
+          "heightMultiplier": 0.75,
+          "hole": false,
+          "datasource": {
+            "type": "APM",
+            "name": "service-now-data"
+          },
+          "timeCompare": false,
+          "cardFilterOptions": [
+            {
+              "field": "assignment_group",
+              "displayField": "assignment_group",
+              "filterValueOptions": [],
+              "restrictOptions": false,
+              "singleSelect": false
+            },
+            {
+              "field": "location",
+              "displayField": "location",
+              "filterValueOptions": [],
+              "restrictOptions": false,
+              "singleSelect": false
+            }
+          ],
+          "allowEndUserOrderByControl": false,
+          "endUserOrderByRestrictOptions": false,
+          "endUserOrderByOptions": [],
+          "customDrilldowns": [],
+          "gridMaxRows": 20,
+          "gridMaxCols": 20,
+          "gridInitialOrderByField": null,
+          "gridInitialOrderByAscending": false
+        },
+        {
+          "class": ".CustomCardDef",
+          "name": "Aternity Indicents vs Others",
+          "seriesList": [
+            {
+              "metric": {
+                "metricId": "SERVICE_NOW_INCIDENT",
+                "dimensions": []
+              },
+              "enabledDimensions": [],
+              "groupByDimensionOptions": [
+                {
+                  "field": "correlation_display",
+                  "displayField": "correlation_display",
+                  "value": null,
+                  "displayValue": null
+                }
+              ],
+              "groupByDimensions": {
+                "correlation_display": true
+              },
+              "topN": true,
+              "color": {
+                "fillColor": "#c9dfed",
+                "strokeColor": "#2980b9"
+              },
+              "statistic": "CNT",
+              "leftAxis": true,
+              "additionalTableMetrics": [],
+              "tableShowBars": false,
+              "tableColumns": [],
+              "tableTimeWindows": [],
+              "knowAllDimensions": false,
+              "topNLimit": 6,
+              "ascending": false,
+              "orderByField": {
+                "name": "SERVICE_NOW_INCIDENT",
+                "type": "metric",
+                "statistic": "CNT",
+                "displayName": "ServiceNowIncident"
+              }
+            }
+          ],
+          "visType": "STACK",
+          "cardSize": "NORMAL",
+          "heightMultiplier": 1,
+          "hole": false,
+          "datasource": {
+            "type": "APM",
+            "name": "service-now-data"
+          },
+          "timeCompare": false,
+          "cardFilterOptions": [],
+          "allowEndUserOrderByControl": false,
+          "endUserOrderByRestrictOptions": false,
+          "endUserOrderByOptions": [],
+          "customDrilldowns": [],
+          "gridMaxRows": 20,
+          "gridMaxCols": 20,
+          "gridInitialOrderByField": null,
+          "gridInitialOrderByAscending": false
+        },
+        {
+          "class": ".CustomCardDef",
+          "name": "Top Callers",
+          "seriesList": [
+            {
+              "metric": {
+                "metricId": "SERVICE_NOW_INCIDENT",
+                "dimensions": []
+              },
+              "enabledDimensions": [],
+              "groupByDimensionOptions": [
+                {
+                  "field": "caller_id",
+                  "displayField": "caller_id",
+                  "value": null,
+                  "displayValue": null
+                }
+              ],
+              "groupByDimensions": {
+                "caller_id": true
+              },
+              "topN": true,
+              "color": {
+                "fillColor": "#c9dfed",
+                "strokeColor": "#2980b9"
+              },
+              "statistic": "CNT",
+              "leftAxis": true,
+              "additionalTableMetrics": [],
+              "tableShowBars": false,
+              "tableColumns": [],
+              "tableTimeWindows": [],
+              "knowAllDimensions": false,
+              "topNLimit": 11,
+              "ascending": false,
+              "orderByField": {
+                "name": "SERVICE_NOW_INCIDENT",
+                "type": "metric",
+                "statistic": "CNT",
+                "displayName": "ServiceNowIncident"
+              }
+            }
+          ],
+          "visType": "BARS",
+          "cardSize": "NORMAL",
+          "heightMultiplier": 1,
+          "hole": false,
+          "datasource": {
+            "type": "APM",
+            "name": "service-now-data"
+          },
+          "timeCompare": false,
+          "cardFilterOptions": [],
+          "allowEndUserOrderByControl": false,
+          "endUserOrderByRestrictOptions": false,
+          "endUserOrderByOptions": [],
+          "customDrilldowns": [],
+          "gridMaxRows": 20,
+          "gridMaxCols": 20,
+          "gridInitialOrderByField": null,
+          "gridInitialOrderByAscending": false
+        },
+        {
+          "class": ".CustomCardDef",
+          "name": "Aternity Incidents vs Others",
+          "seriesList": [
+            {
+              "metric": {
+                "metricId": "SERVICE_NOW_INCIDENT",
+                "dimensions": []
+              },
+              "enabledDimensions": [],
+              "groupByDimensionOptions": [
+                {
+                  "field": "correlation_display",
+                  "displayField": "correlation_display",
+                  "value": null,
+                  "displayValue": null
+                }
+              ],
+              "groupByDimensions": {
+                "correlation_display": true
+              },
+              "topN": true,
+              "color": {
+                "fillColor": "#c9dfed",
+                "strokeColor": "#2980b9"
+              },
+              "statistic": "CNT",
+              "leftAxis": true,
+              "additionalTableMetrics": [],
+              "tableShowBars": false,
+              "tableColumns": [],
+              "tableTimeWindows": [],
+              "knowAllDimensions": false,
+              "topNLimit": 6,
+              "ascending": false,
+              "orderByField": {
+                "name": "SERVICE_NOW_INCIDENT",
+                "type": "metric",
+                "statistic": "CNT",
+                "displayName": "ServiceNowIncident"
+              }
+            }
+          ],
+          "visType": "PIE",
+          "cardSize": "NORMAL",
+          "heightMultiplier": 1,
+          "hole": false,
+          "datasource": {
+            "type": "APM",
+            "name": "service-now-data"
+          },
+          "timeCompare": false,
+          "cardFilterOptions": [],
+          "allowEndUserOrderByControl": false,
+          "endUserOrderByRestrictOptions": false,
+          "endUserOrderByOptions": [],
+          "customDrilldowns": [],
+          "gridMaxRows": 20,
+          "gridMaxCols": 20,
+          "gridInitialOrderByField": null,
+          "gridInitialOrderByAscending": false
+        },
+        {
+          "class": ".CustomCardDef",
+          "name": "All Incidents By Group",
+          "seriesList": [
+            {
+              "metric": {
+                "metricId": "SERVICE_NOW_INCIDENT",
+                "dimensions": []
+              },
+              "enabledDimensions": [],
+              "groupByDimensionOptions": [
+                {
+                  "field": "assignment_group",
+                  "displayField": "assignment_group",
+                  "value": null,
+                  "displayValue": null
+                }
+              ],
+              "groupByDimensions": {
+                "assignment_group": true
+              },
+              "topN": true,
+              "color": {
+                "fillColor": "#c9dfed",
+                "strokeColor": "#2980b9"
+              },
+              "statistic": "CNT",
+              "leftAxis": true,
+              "additionalTableMetrics": [
+                {
+                  "name": "SERVICE_NOW_INCIDENT",
+                  "type": "metric",
+                  "statistic": "CNT",
+                  "displayName": "ServiceNowIncident"
+                }
+              ],
+              "tableShowBars": false,
+              "tableColumns": [
+                {
+                  "displayType": "NUMBER",
+                  "minorThreshold": null,
+                  "majorThreshold": null,
+                  "criticalThreshold": null,
+                  "columnHeader": "# Incidents",
+                  "ledThresholdGreater": true
+                }
+              ],
+              "tableTimeWindows": [
+                "SELECTED"
+              ],
+              "knowAllDimensions": false,
+              "topNLimit": 9,
+              "ascending": false,
+              "orderByField": {
+                "name": "SERVICE_NOW_INCIDENT",
+                "type": "metric",
+                "statistic": "CNT",
+                "displayName": "ServiceNowIncident"
+              }
+            }
+          ],
+          "visType": "TABLE",
+          "cardSize": "NORMAL",
+          "heightMultiplier": 1,
+          "hole": false,
+          "datasource": {
+            "type": "APM",
+            "name": "service-now-data"
+          },
+          "timeCompare": false,
+          "cardFilterOptions": [],
+          "allowEndUserOrderByControl": false,
+          "endUserOrderByRestrictOptions": false,
+          "endUserOrderByOptions": [],
+          "customDrilldowns": [],
+          "gridMaxRows": 20,
+          "gridMaxCols": 20,
+          "gridInitialOrderByField": null,
+          "gridInitialOrderByAscending": false
+        },
+        {
+          "class": ".CustomCardDef",
+          "name": "All Incidents by Group",
+          "seriesList": [
+            {
+              "metric": {
+                "metricId": "SERVICE_NOW_INCIDENT",
+                "dimensions": []
+              },
+              "enabledDimensions": [],
+              "groupByDimensionOptions": [
+                {
+                  "field": "assignment_group",
+                  "displayField": "assignment_group",
+                  "value": null,
+                  "displayValue": null
+                }
+              ],
+              "groupByDimensions": {
+                "assignment_group": true
+              },
+              "topN": true,
+              "color": {
+                "fillColor": "#c9dfed",
+                "strokeColor": "#2980b9"
+              },
+              "statistic": "CNT",
+              "leftAxis": true,
+              "additionalTableMetrics": [],
+              "tableShowBars": false,
+              "tableColumns": [],
+              "tableTimeWindows": [],
+              "knowAllDimensions": false,
+              "topNLimit": 6,
+              "ascending": false,
+              "orderByField": {
+                "name": "SERVICE_NOW_INCIDENT",
+                "type": "metric",
+                "statistic": "CNT",
+                "displayName": "ServiceNowIncident"
+              }
+            }
+          ],
+          "visType": "PIE",
+          "cardSize": "NORMAL",
+          "heightMultiplier": 1,
+          "hole": false,
+          "datasource": {
+            "type": "APM",
+            "name": "service-now-data"
+          },
+          "timeCompare": false,
+          "cardFilterOptions": [],
+          "allowEndUserOrderByControl": false,
+          "endUserOrderByRestrictOptions": false,
+          "endUserOrderByOptions": [],
+          "customDrilldowns": [],
+          "gridMaxRows": 20,
+          "gridMaxCols": 20,
+          "gridInitialOrderByField": null,
+          "gridInitialOrderByAscending": false
+        },
+        {
+          "class": ".CustomCardDef",
+          "name": "All Incidents by Location",
+          "seriesList": [
+            {
+              "metric": {
+                "metricId": "SERVICE_NOW_INCIDENT",
+                "dimensions": []
+              },
+              "enabledDimensions": [],
+              "groupByDimensionOptions": [
+                {
+                  "field": "location",
+                  "displayField": "location",
+                  "value": null,
+                  "displayValue": null
+                }
+              ],
+              "groupByDimensions": {
+                "location": true
+              },
+              "topN": true,
+              "color": {
+                "fillColor": "#c9dfed",
+                "strokeColor": "#2980b9"
+              },
+              "statistic": "CNT",
+              "leftAxis": true,
+              "additionalTableMetrics": [],
+              "tableShowBars": false,
+              "tableColumns": [],
+              "tableTimeWindows": [],
+              "knowAllDimensions": false,
+              "topNLimit": 10,
+              "ascending": false,
+              "orderByField": {
+                "name": "SERVICE_NOW_INCIDENT",
+                "type": "metric",
+                "statistic": "CNT",
+                "displayName": "ServiceNowIncident"
+              }
+            }
+          ],
+          "visType": "BARS",
+          "cardSize": "NORMAL",
+          "heightMultiplier": 1,
+          "hole": false,
+          "datasource": {
+            "type": "APM",
+            "name": "service-now-data"
+          },
+          "timeCompare": false,
+          "cardFilterOptions": [],
+          "allowEndUserOrderByControl": false,
+          "endUserOrderByRestrictOptions": false,
+          "endUserOrderByOptions": [],
+          "customDrilldowns": [],
+          "gridMaxRows": 20,
+          "gridMaxCols": 20,
+          "gridInitialOrderByField": null,
+          "gridInitialOrderByAscending": false
+        },
+        {
+          "class": ".CustomCardDef",
+          "name": "All Incidents by Location",
+          "seriesList": [
+            {
+              "metric": {
+                "metricId": "SERVICE_NOW_INCIDENT",
+                "dimensions": []
+              },
+              "enabledDimensions": [],
+              "groupByDimensionOptions": [
+                {
+                  "field": "location",
+                  "displayField": "location",
+                  "value": null,
+                  "displayValue": null
+                }
+              ],
+              "groupByDimensions": {
+                "location": true
+              },
+              "topN": true,
+              "color": {
+                "fillColor": "#c9dfed",
+                "strokeColor": "#2980b9"
+              },
+              "statistic": "CNT",
+              "leftAxis": true,
+              "additionalTableMetrics": [],
+              "tableShowBars": false,
+              "tableColumns": [],
+              "tableTimeWindows": [],
+              "knowAllDimensions": false,
+              "topNLimit": 10,
+              "ascending": false,
+              "orderByField": {
+                "name": "SERVICE_NOW_INCIDENT",
+                "type": "metric",
+                "statistic": "CNT",
+                "displayName": "ServiceNowIncident"
+              }
+            }
+          ],
+          "visType": "PIE",
+          "cardSize": "NORMAL",
+          "heightMultiplier": 1,
+          "hole": false,
+          "datasource": {
+            "type": "APM",
+            "name": "service-now-data"
+          },
+          "timeCompare": false,
+          "cardFilterOptions": [],
+          "allowEndUserOrderByControl": false,
+          "endUserOrderByRestrictOptions": false,
+          "endUserOrderByOptions": [],
+          "customDrilldowns": [],
+          "gridMaxRows": 20,
+          "gridMaxCols": 20,
+          "gridInitialOrderByField": null,
+          "gridInitialOrderByAscending": false
+        }
+      ],
+      "tabFilterOptions": [],
+      "insightsIframeUrl": null,
+      "insightsIframeHeight": null
+    }
+  ]
+}

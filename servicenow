@@ -1,0 +1,19 @@
+#!/bin/sh
+# ***************************************************************************
+#
+#     Copyright (c) 2020 Aternity Inc. All rights reserved.
+#
+#     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#
+#  Description:     Script to start Service Now java cmx generator
+#
+#  Changes:
+#
+#  - Date   -  UID  --------------------- Description ---------------------
+#  06/09/2020  com  Initial Version
+#
+# *****************************************************************************************
+
+#!/bin/sh
+
+exec ../jre/bin/java -jar service-now-generator-1.0-jar-with-dependencies.jar
