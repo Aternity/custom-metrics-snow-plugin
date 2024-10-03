@@ -1,4 +1,4 @@
-# Aternity Custom Metrics SNOW Plugin
+# APM Custom Metrics - Example of a SNOW Plugin
 Custom Metrics Plugin for extracting ServiceNow (SNOW) metrics.
 
 * Incidents
@@ -44,7 +44,7 @@ All setup steps will be in the context of the agent's bin directory which is:
 Linux: `/opt/Panorama/hedzup/mn/bin`   
 Windows: `c:\Panorama\hedzup\mn\bin` (may be installed on any drive, potentially)   
 
-1) Stop the Aternity APM agent. (`sudo ./dsactl stop`)
+1) Stop the APM agent. (`sudo ./dsactl stop`)
 
 2) Put all the files that were downloaded from GitHub in the bin directory, and do the following:
  
@@ -52,7 +52,7 @@ Windows: `c:\Panorama\hedzup\mn\bin` (may be installed on any drive, potentially
 
 4) Do any plugin configuration that's needed (see below).
 
-5) Start the Aternity APM agent. (`sudo ./dsactl start`)
+5) Start the APM agent. (`sudo ./dsactl start`)
 
 ## Plugin Configuration
 There are two properties files that should be reviewed (and modified) to configure the plugin. snow-config.properties can usually be left as-is.
