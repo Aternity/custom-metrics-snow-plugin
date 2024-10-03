@@ -23,7 +23,7 @@ The first time the plugin runs, it will get all the records available up until t
 Installation summary: to install this plugin, you will need to download the plugin files from a github repo. An agent will need to be installed and
 pointed to an analysis server. The plugin files will be placed on the machine running the agent.
 
-## Aternity APM Agent Version
+## APM Agent Version
 11.4.0.533 and 11.4.4.502 have been tested with this plugin
 
 Go to the support site to download and install (instructions provided on the support site):
